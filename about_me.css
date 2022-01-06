@@ -1,0 +1,170 @@
+:root {
+    --main-white: #4C6B79;
+    --main-red: #E1B5A5;
+    --main-blue: #E4DCD0;
+    --main-gray: #B2BCBB;
+  }
+  
+  /* Base reset */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* box-sizing and font sizing */
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* font size zoom */
+    scroll-behavior: smooth;
+  }
+  
+  @media (max-width: 75em) {
+    html {
+      font-size: 60%;
+    }
+  }
+  
+  /* 980px / 16px = 61.25em */
+  @media (max-width: 61.25em) {
+    html {
+      font-size: 58%;
+    }
+  }
+  
+  /* 460px / 16px = 28.75em */
+  @media (max-width: 28.75em) {
+    html {
+      font-size: 55%;
+    }
+  }
+  
+  /* Base styles */
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem; /* 18px */
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--main-white);
+  }
+  
+  h1,
+  h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 6em;
+  }
+  
+  h2 {
+    font-size: 4.2rem;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--main-white);
+  }
+  
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  /* nav */
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--main-red);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    z-index: 10;
+  }
+  
+  .nav-list {
+    display: flex;
+    margin-right: 2rem;
+  }
+  
+  @media (max-width: 28.75em) {
+    .nav {
+      justify-content: center;
+    }
+  
+    .nav-list {
+      margin: 0 1rem;
+    }
+  }
+  
+  .nav-list a {
+    display: block;
+    font-size: 2.2rem;
+    padding: 2rem;
+  }
+  
+  .nav-list a:hover {
+    background: var(--main-blue);
+  }
+
+
+  @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+  /* Global */
+  html{
+    min-height: 100%;
+    overflow: hidden;
+  }
+  body{
+    height: calc(100vh - 8em);
+    padding: 4em;
+    color: #000000;
+    font-family: 'Anonymous Pro', monospace;  
+    background-color: #E4DCD0;  
+  }
+  .line-1{
+      position: left;
+      top: 50%;  
+      width: 24em;
+      margin: 0 auto;
+      border-right: 2px solid #000000;
+      font-size: 180%;
+      text-align: left;
+      white-space: nowrap;
+      overflow: hidden;
+      ;    
+  }
+  
+  /* Animation */
+  .anim-typewriter{
+    animation: typewriter 3s steps(29, end) 1s 1 normal both,
+               blinkTextCursor 500ms steps(29, end) infinite normal;
+  }
+  @keyframes typewriter{
+    from{width: 0;}
+    to{width: 5em;}
+  }
+  @keyframes blinkTextCursor{
+    from{border-right-color: #000000;}
+    to{border-right-color: transparent;}
+  }
+
+.one-liner{
+    text-align: left;
+    color: #000000;
+}
